@@ -10,6 +10,7 @@
         }],
         "no-eol-whitespace": [true, {
             "ignore": ["empty-lines"]
-        }]
+        }],
+        "selector-type-no-unknown": null
     }
 }
