@@ -12,12 +12,12 @@ download_mff() {
 
         USERCHROME="/tmp/minimal-functional-fox-master/userChrome.css"
         USERCONTENT="/tmp/minimal-functional-fox-master/userContent.css"
-        cp -rv --backup=simple -t "$CHROME_DIRECTORY $USERCHROME $USERCONTENT"
-        rm -fv USERCHROME USERCONTENT
+        cp -rv --backup=simple -t "$CHROME_DIRECTORY" "$USERCHROME" "$USERCONTENT"
+        rm -fv "$USERCHROME" "$USERCONTENT"
         cp -rv /tmp/minimal-functional-fox-master/* "$CHROME_DIRECTORY"
 
         if true; then
-            rm -rf /tmp/minimal-functional-fox-master
+            rm -rfv /tmp/minimal-functional-fox-master
         else
             echoerr " [!!] There was a problem copying the files. Terminating..."
             return 1
