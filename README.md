@@ -84,19 +84,19 @@ After installation, restart Firefox to see the effects.
 
 ## Customizing
 
-You can easily tweak the theme by changing the relevant CSS variables, starting with `--mff-` located within the :root section at the top of the `userChrome.css` file.
+You can easily tweak the theme by changing the relevant SASS variables, starting with `$mff-` located within the `src/_variables.scss` file. Note that you will need a [sass compiler](https://sass-lang.com/) to do this.
 
-```css
- :root {
-     /* Minimal Functional Fox variables*/
-     --mff-bg: #293241;
-     --mff-icon-color: #e0fbfc;
-     --mff-nav-toolbar-padding: 8px;
-     /*
-     ...
-     ...
-     ...
-     */
-}
+You must compile the `.scss` files to `css`. How you do this depends on how you installed SASS. Note that only `dart-sass` will work.
+
+- If you're using NPM, you can run `npm install`, then `npm run sass` to compile.
+- If you've installed SASS through another method, run `sass src/:. --no-source-map --style compressed` to compile. Note that sass versions that are not dart sass are deprecated.
+
+If you don't want to use SASS, you can use [the original repo](https://github.com/mut-ex/minimal-functional-fox).
+
+```scss
+$mff-bg: #292f36;
+$mff-icon-color: #e0fbfc;
+$mff-nav-toolbar-padding: 8px;
+// ...
 ```
 

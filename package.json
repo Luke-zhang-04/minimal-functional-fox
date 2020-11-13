@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "sass": "node_modules/.bin/sass src/:. --no-source-map --style compressed"
+  },
   "devDependencies": {
     "sass": "^1.29.0",
     "stylelint-config-standard": "^20.0.0"
