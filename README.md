@@ -1,10 +1,10 @@
 # minimal-functional-fox
 
+This fork involves better fonts and a complete SASS rewrite.
+
 > ###### *A minimal, yet functional configuration for Firefox!*
 
-![Demo](https://raw.githubusercontent.com/mut-ex/minimal-functional-fox/master/demo.gif)
-
-[![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
+[![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/Luke-zhang-04/minimal-functional-fox/blob/master/LICENSE)
 ------
 ## Features
 
@@ -47,13 +47,13 @@
 You can quickly install minimal functional fox via the command-line by using `curl`:
 
 ```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/mut-ex/minimal-functional-fox/master/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/Luke-zhang-04/minimal-functional-fox/master/install.sh)"
 ```
 
 It is a good idea to inspect the install script for projects you aren't familiar with. To do that, you can download the install script separately, go through it to make sure everything looks OK, then go ahead and run it once you are satisfied:
 
 ```bash
-curl -Lo install.sh https://raw.githubusercontent.com/mut-ex/minimal-functional-fox/master/install.sh
+curl -Lo install.sh https://raw.githubusercontent.com/Luke-zhang-04/minimal-functional-fox/master/install.sh
 sh install.sh
 ```
 
@@ -91,7 +91,7 @@ You must compile the `.scss` files to `css`. How you do this depends on how you 
 - If you're using NPM, you can run `npm install`, then `npm run sass` to compile.
 - If you've installed SASS through another method, run `sass src/:. --no-source-map --style compressed` to compile. Note that sass versions that are not dart sass are deprecated.
 
-If you don't want to use SASS, you can use [the original repo](https://github.com/mut-ex/minimal-functional-fox).
+If you don't want to use SASS, you can use [the original repo](https://github.com/Luke-zhang-04/minimal-functional-fox).
 
 ```scss
 $mff-bg: #292f36;
