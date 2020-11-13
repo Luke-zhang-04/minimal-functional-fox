@@ -26,6 +26,14 @@
     background: variables.$mff-tab-selected-bg !important;
   }
 
+  &[pinned="true"] {
+    background: variables.$mff-tab-pinned-bg !important;
+  }
+
+  &[soundplaying="true"] {
+    background: variables.$mff-tab-soundplaying-bg !important;
+  }
+
   &:not[visuallyselected] {
     background: variables.$mff-tab-selected-bg !important;
     opacity: 0.5 !important;
@@ -38,7 +46,7 @@
 }
 
 .tab-close-button {
-  display: block !important;
+  display: none !important;
 }
 
 .tabbrowser-tab {
@@ -58,19 +66,24 @@
 
   &[pinned="true"] {
     border-bottom: 1px solid variables.$mff-tab-pinned-underline !important;
-
-    .tab-close-button {
-      display: none !important;
-    }
   }
 
   &[soundplaying="true"] {
-    background-color: variables.$mff-tab-soundplaying-bg !important;
     border-bottom: 1px solid variables.$mff-tab-soundplaying-underline !important;
   }
 
   &[selected="true"] {
     border-bottom: 1px solid variables.$mff-tab-selected-underline !important;
+
+    .tab-close-button {
+      display: block !important;
+    }
+  }
+
+  &:hover:not([pinned="true"]) {
+    .tab-close-button {
+      display: block !important;
+    }
   }
 
   &:not[visuallyselected] {
