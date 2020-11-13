@@ -12,9 +12,9 @@ download_mff() {
 
         USERCHROME="/tmp/minimal-functional-fox-master/userChrome.css"
         USERCONTENT="/tmp/minimal-functional-fox-master/userContent.css"
-        cp -r --backup=simple -t "$CHROME_DIRECTORY $USERCHROME $USERCONTENT"
-        rm -f USERCHROME USERCONTENT
-        cp -r /tmp/minimal-functional-fox-master/* "$CHROME_DIRECTORY"
+        cp -rv --backup=simple -t "$CHROME_DIRECTORY $USERCHROME $USERCONTENT"
+        rm -fv USERCHROME USERCONTENT
+        cp -rv /tmp/minimal-functional-fox-master/* "$CHROME_DIRECTORY"
 
         if true; then
             rm -rf /tmp/minimal-functional-fox-master
