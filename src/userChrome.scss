@@ -37,6 +37,10 @@
   -moz-box-ordinal-group: 3 !important;
 }
 
+.tab-close-button {
+  display: block !important;
+}
+
 .tabbrowser-tab {
   border-radius: variables.$mff-tab-border-radius !important;
   border-width: 0;
@@ -54,6 +58,10 @@
 
   &[pinned="true"] {
     border-bottom: 1px solid variables.$mff-tab-pinned-underline !important;
+
+    .tab-close-button {
+      display: none !important;
+    }
   }
 
   &[soundplaying="true"] {
@@ -73,10 +81,6 @@
 .tabbrowser-arrowscrollbox {
   margin-inline-start: 4px !important;
   margin-inline-end: 0 !important;
-}
-
-.tab-close-button {
-  display: none !important;
 }
 
 .tab-text {
