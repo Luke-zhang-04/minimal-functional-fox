@@ -5,7 +5,7 @@ echoerr() { printf "%s\n" "$*" >&2; }
 download_mff() {
     echoerr " [>>] Downloading..."
 
-    curl -LJ0 https://github.com/mut-ex/minimal-functional-fox/archive/master.tar.gz | tar -xz -C /tmp/
+    curl -LJ0 https://github.com/Luke-zhang-04/minimal-functional-fox/archive/master.tar.gz | tar -xz -C /tmp/
 
     if true; then
         echoerr " [>>] Copying..."
@@ -48,19 +48,15 @@ EOF
 MOZILLA_USER_DIRECTORY="$(find ~/.mozilla/firefox -maxdepth 1 -type d -regextype egrep -regex '.*[a-zA-Z0-9]+.default-release')"
 
 if [[ -n $MOZILLA_USER_DIRECTORY ]]; then
-    # echoerr "mozilla user directory found: $MOZILLA_USER_DIRECTORY"
-
     CHROME_DIRECTORY="$(find "$MOZILLA_USER_DIRECTORY" -maxdepth 1 -type d -name 'chrome')"
 
     if [[ -n $CHROME_DIRECTORY ]]; then
-        # echoerr "chrome directory found: ""$CHROME_DIRECTORY"
         download_mff
     else
         echoerr " [>>] No chrome directory found! Creating one..."
         mkdir "$MOZILLA_USER_DIRECTORY/chrome"
         if true; then
             CHROME_DIRECTORY="$MOZILLA_USER_DIRECTORY/chrome"
-            # echoerr "Directory succesfully created"
             download_mff
         else
             echoerr " [!!] There was a problem creating the directory. Terminating..."

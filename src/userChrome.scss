@@ -1,0 +1,314 @@
+/*!
+ * Copyright 2019-2020 mut-ex
+ * Copyright 2020 Luke Zhang
+ * MIT License
+ */
+
+@use "variables.scss";
+
+:root {
+  /* Overriden Firefox variables */
+  --autocomplete-popup-background: #{variables.$mff-bg} !important;
+  --default-arrowpanel-background: #{variables.$mff-bg} !important;
+  --default-arrowpanel-color: #fefefa !important;
+  --lwt-toolbarbutton-icon-fill: #{variables.$mff-icon-color} !important;
+  --panel-disabled-color: #f9f9fa80;
+  --toolbar-bgcolor: #{variables.$mff-bg} !important;
+  --urlbar-separator-color: transparent !important;
+}
+
+// Tabs
+
+.tab-background {
+  border: none !important;
+
+  &[selected="true"] {
+    background: variables.$mff-tab-selected-bg !important;
+  }
+
+  &:not[visuallyselected] {
+    background: variables.$mff-tab-selected-bg !important;
+    opacity: 0.5 !important;
+  }
+}
+
+/* This positions the tabs under the navaigator container */
+#titlebar {
+  -moz-box-ordinal-group: 3 !important;
+}
+
+.tabbrowser-tab {
+  border-radius: variables.$mff-tab-border-radius !important;
+  border-width: 0;
+  height: variables.$mff-tab-height !important;
+  margin-bottom: 4px !important;
+  margin-inline-end: 4px !important;
+  margin-top: 4px !important;
+  max-height: variables.$mff-tab-height !important;
+  min-height: variables.$mff-tab-height !important;
+
+  &::before,
+  &::after {
+    border-left: none !important;
+  }
+
+  &[soundplaying="true"] {
+    background-color: variables.$mff-tab-soundplaying-bg !important;
+  }
+}
+
+.tabbrowser-arrowscrollbox {
+  margin-inline-start: 4px !important;
+  margin-inline-end: 0 !important;
+}
+
+.tab-close-button {
+  display: none !important;
+}
+
+.tab-text {
+  font-family: variables.$mff-tab-font-family;
+  font-weight: variables.$mff-tab-font-weight;
+  font-size: variables.$mff-tab-font-size !important;
+  color: variables.$mff-tab-color;
+}
+
+hbox.tab-content {
+  // Hide the favicon for tabs
+  .tab-icon-image {
+    display: none !important;
+  }
+
+  // Show the favicon for tabs that are pinned
+  &[pinned=true] {
+    .tab-icon-image {
+      display: initial !important;
+    }
+
+    .tab-text {
+      display: none !important;
+    }
+  }
+}
+
+#tabbrowser-tabs {
+  --tab-loading-fill: #033433 !important;
+}
+
+.tab-label-container {
+  &:not([textoverflow]) {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    width: 50% !important;
+    max-width: 50% !important;
+    min-width: 50% !important;
+  }
+}
+
+// .tab-label-container::after {
+//   content: "?" !important;
+// }
+
+.tab-line {
+  display: none !important;
+}
+
+#tabs-newtab-button {
+  list-style-image: url("add.svg") !important;
+  opacity: 0.7;
+}
+
+.tab-icon-sound {
+  display: none !important;
+}
+
+image {
+  &#star-button {
+    display: none;
+  }
+
+  &#sidebar-icon {
+    display: none;
+  }
+}
+
+// Toolbar
+.urlbar-icon {
+  color: variables.$mff-icon-color !important;
+
+  & > image {
+    fill: variables.$mff-icon-color !important;
+    color: variables.$mff-icon-color !important;
+  }
+}
+
+.toolbarbutton-text {
+  color: variables.$mff-icon-color !important;
+}
+
+// .toolbarbutton-icon {
+//   filter: drop-shadow(0 0 0.75rem crimson);
+// }
+
+#urlbar-results {
+  font-family: variables.$mff-urlbar-results-font-family;
+  font-weight: variables.$mff-urlbar-results-font-weight;
+  font-size: variables.$mff-urlbar-results-font-size !important;
+  color: variables.$mff-urlbar-results-color !important;
+}
+
+.urlbarView-row {
+  &[type="bookmark"] > span {
+    color: green !important;
+  }
+
+  &[type="switchtab"] > span {
+    color: orange !important;
+  }
+}
+
+.urlbarView-url,
+.search-panel-one-offs-container {
+  color: variables.$mff-urlbar-results-url-color !important;
+  font-family: variables.$mff-urlbar-font-family;
+  font-weight: variables.$mff-urlbar-results-font-weight;
+  font-size: variables.$mff-urlbar-font-size !important;
+}
+
+.urlbarView-favicon,
+.urlbarView-type-icon {
+  display: none !important;
+}
+
+#urlbar-input {
+  font-size: variables.$mff-urlbar-font-size !important;
+  color: variables.$mff-urlbar-color !important;
+  font-family: variables.$mff-urlbar-font-family !important;
+  font-weight: variables.$mff-urlbar-font-weight !important;
+  text-align: center !important;
+
+  &:focus {
+    color: variables.$mff-urlbar-focused-color !important;
+  }
+}
+
+#tracking-protection-icon-container,
+#identity-box {
+  display: none;
+}
+
+#back-button {
+  list-style-image: url("left-arrow.svg") !important;
+
+  & > .toolbarbutton-icon {
+    --backbutton-background: transparent !important;
+
+    border: none !important;
+  }
+}
+
+#forward-button {
+  list-style-image: url("right-arrow.svg") !important;
+}
+
+toolbar {
+  background-image: none !important;
+
+  &#nav-bar {
+    padding: variables.$mff-nav-toolbar-padding !important;
+    padding: 4px !important;
+  }
+}
+
+#urlbar-background {
+  opacity: 0.98 !important;
+  background-color: variables.$mff-bg !important;
+  border: none !important;
+}
+
+#navigator-toolbox,
+toolbaritem {
+  border: none !important;
+}
+
+.toolbar-items {
+  background-color: variables.$mff-bg !important;
+}
+
+#sidebar-search-container {
+  background-color: variables.$mff-sidebar-bg !important;
+}
+
+box {
+  &.panel-arrowbox {
+    display: none;
+  }
+
+  &.panel-arrowcontent {
+    border-radius: 8px !important;
+    border: none !important;
+  }
+}
+
+tab {
+  &.tabbrowser-tab {
+    overflow: hidden;
+  }
+
+  &.tabbrowser-tab:hover {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  }
+}
+
+#urlbar {
+  max-width: 70% !important;
+  margin: 0 15% !important;
+
+  /* 	position: unset!important; */
+}
+
+.megabar[breakout-extend="true"]:not([open="true"]) > #urlbar-background {
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+toolbarbutton {
+  box-shadow: none !important;
+}
+
+// Sidebar
+.close-icon,
+.urlbar-icon {
+  fill: variables.$mff-icon-color !important;
+}
+
+.sidebar-placesTree {
+  color: variables.$mff-sidebar-color !important;
+}
+
+// #sidebar-switcher-target {
+//   color: white !important;
+// }
+
+#sidebar-box {
+  --sidebar-background-color: variables.$mff-sidebar-bg !important;
+}
+
+splitter {
+  &#sidebar-splitter {
+    opacity: 0 !important;
+    border: none !important;
+    background-color: transparent !important;
+  }
+}
+
+// Arrow pannel
+.panel-arrowcontent {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+toolbarseparator {
+  display: none;
+}

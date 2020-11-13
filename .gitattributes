@@ -1,0 +1,5 @@
+# CSS is generated
+*.css linguist-generated=true
+
+# Enforce Unix newlines
+* text=auto eol=lf
