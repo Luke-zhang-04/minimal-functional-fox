@@ -4,6 +4,8 @@ This fork involves better fonts and a complete SASS rewrite.
 
 > ###### *A minimal, yet functional configuration for Firefox!*
 
+![screenshot](./screenshot.png)
+
 [![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/Luke-zhang-04/minimal-functional-fox/blob/master/LICENSE)
 ------
 ## Features
