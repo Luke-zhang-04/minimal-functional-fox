@@ -52,6 +52,10 @@
     border-left: none !important;
   }
 
+  &[pinned="true"] {
+    border-bottom: 1px solid variables.$mff-tab-pinned-underline !important;
+  }
+
   &[soundplaying="true"] {
     background-color: variables.$mff-tab-soundplaying-bg !important;
     border-bottom: 1px solid variables.$mff-tab-soundplaying-underline !important;
