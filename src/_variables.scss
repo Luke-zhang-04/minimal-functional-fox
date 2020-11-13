@@ -5,34 +5,40 @@
 
 // Minimal Functional Fox variables
 
+// Notes for self:
+// background #121e22 to match wallpaper
+
 // General
-$mff-bg: #292f36;
-$mff-icon-color: #e0fbfc;
+$mff-bg: #212121;
+$mff-icon-color: #eff;
 $mff-nav-toolbar-padding: 8px;
 
 // Sidebar
 $mff-sidebar-bg: $mff-bg;
-$mff-sidebar-color: #e0fbfc;
+$mff-sidebar-color: #eff;
 
 // Tabs
 $mff-tab-border-radius: 0;
-$mff-tab-color: #fefefa;
-$mff-tab-font-family: "BitStream Vera Sans", "Cantarell", sans;
+$mff-tab-color: #f4f4f4;
+$mff-tab-font-family: "Roboto", "BitStream Vera Sans", "Cantarell", sans;
 $mff-tab-font-size: 11pt;
 $mff-tab-font-weight: 400;
 $mff-tab-height: 32px;
-$mff-tab-pinned-bg: #70c1b3;
-$mff-tab-selected-bg: #ee6c4d;
-$mff-tab-soundplaying-bg: #9c89b8;
+$mff-tab-pinned-bg: #212121;
+$mff-tab-pinned-underline: #c3e88d;
+$mff-tab-selected-bg: #212121;
+$mff-tab-selected-underline: #82aaff;
+$mff-tab-soundplaying-bg: #212121;
+$mff-tab-soundplaying-underline: #c3e88d;
 
 // Urlbar
-$mff-urlbar-color: #98c1d9;
-$mff-urlbar-focused-color: #e0fbfc;
-$mff-urlbar-font-family: "BitStream Vera Sans", "Cantarell", sans;
+$mff-urlbar-color: #eff;
+$mff-urlbar-focused-color: #eff;
+$mff-urlbar-font-family: "Roboto", "BitStream Vera Sans", "Cantarell", sans;
 $mff-urlbar-font-size: 12pt;
 $mff-urlbar-font-weight: 700;
-$mff-urlbar-results-color: #e0fbfc;
-$mff-urlbar-results-font-family: "BitStream Vera Sans", "Cantarell", sans;
+$mff-urlbar-results-color: #eff;
+$mff-urlbar-results-font-family: "Roboto", "BitStream Vera Sans", "Cantarell", sans;
 $mff-urlbar-results-font-size: 12pt;
 $mff-urlbar-results-font-weight: 700;
-$mff-urlbar-results-url-color: #98c1d9;
+$mff-urlbar-results-url-color: #aaa;
