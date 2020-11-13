@@ -2,6 +2,8 @@
 
 echoerr() { printf "%s\n" "$*" >&2; }
 
+validResponseValues=("y" "N")
+
 download_mff() {
     echoerr " [>>] Downloading..."
 
@@ -62,6 +64,21 @@ if [[ -n $MOZILLA_USER_DIRECTORY ]]; then
             echoerr " [!!] There was a problem creating the directory. Terminating..."
             exit 1
         fi
+    fi
+
+    echo "You have the option to remove any unecessary files. You won't be able to customize is you say yes."
+    printf "Remove unecessary files? [Y/n] "
+    read -r removeFiles
+    if [[ "$removeFiles" == "" ]]; then
+        removeFiles="y"
+    elif [[ ! "${validResponseValues[*]}" =~ $removeFiles ]]; then
+        echo "Unknown response. Response should either be y, N, or nothing"
+
+        exit 1
+    fi
+
+    if [[ "$removeFiles" == "y" ]]; then
+        rm -rfv "$CHROME_DIRECTORY"/src "$CHROME_DIRECTORY"/.* "$CHROME_DIRECTORY"/.package.json "$CHROME_DIRECTORY"/*.png
     fi
 
 else

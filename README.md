@@ -61,6 +61,8 @@ sh install.sh
 
 **Note:** The install script will create a backup of your existing `userChrome.css`, and `userContent.css` files by renaming them to `userChrome.css~`, and `userContent.css~` respectively in the chrome directory.
 
+**Note:** Running this will erase any data in your `~/.mozilla/firefox/[0-9]|[a-z].defualt-release/chrome`. If you haven't touched this directory before, chances are it doesn't even exit yet, and you can ignore this.
+
 ### Manual Install
 
 If quick install does not work, or if you simply prefer to; you can manually install  minimal functional fox through the following steps:
