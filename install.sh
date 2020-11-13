@@ -1,4 +1,7 @@
 #!/bin/bash
+# Copyright 2019-2020 mut-ex
+# Copyright 2020 Luke Zhang
+# MIT License
 
 echoerr() { printf "%s\n" "$*" >&2; }
 
@@ -78,7 +81,7 @@ if [[ -n $MOZILLA_USER_DIRECTORY ]]; then
     fi
 
     if [[ "$removeFiles" == "y" ]]; then
-        rm -rfv "$CHROME_DIRECTORY"/src "$CHROME_DIRECTORY"/.* "$CHROME_DIRECTORY"/.package.json "$CHROME_DIRECTORY"/*.png
+        rm -rfv "$CHROME_DIRECTORY"/src "$CHROME_DIRECTORY"/.editorconfig "$CHROME_DIRECTORY"/.stylelintrc.json "$CHROME_DIRECTORY"/.git* "$CHROME_DIRECTORY"/.package.json "$CHROME_DIRECTORY"/*.png "$CHROME_DIRECTORY"/*.gif
     fi
 
 else
