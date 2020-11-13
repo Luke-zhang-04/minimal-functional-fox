@@ -49,6 +49,13 @@
   display: none !important;
 }
 
+.tab-text {
+  font-family: variables.$mff-tab-font-family;
+  font-weight: variables.$mff-tab-font-weight;
+  font-size: variables.$mff-tab-font-size !important;
+  color: variables.$mff-tab-color;
+}
+
 .tabbrowser-tab {
   border-radius: variables.$mff-tab-border-radius !important;
   border-width: 0;
@@ -73,7 +80,11 @@
   }
 
   &[selected="true"] {
-    border-bottom: 1px solid variables.$mff-tab-selected-underline !important;
+    border-bottom: 2px solid variables.$mff-tab-selected-underline !important;
+
+    .tab-text {
+      font-weight: variables.$mff-selected-font-weight;
+    }
 
     .tab-close-button {
       display: block !important;
@@ -94,13 +105,6 @@
 .tabbrowser-arrowscrollbox {
   margin-inline-start: 4px !important;
   margin-inline-end: 0 !important;
-}
-
-.tab-text {
-  font-family: variables.$mff-tab-font-family;
-  font-weight: variables.$mff-tab-font-weight;
-  font-size: variables.$mff-tab-font-size !important;
-  color: variables.$mff-tab-color;
 }
 
 hbox.tab-content {
