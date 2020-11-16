@@ -1,8 +1,5 @@
 /*!
- * Copyright 2020 Luke Zhang
- * MIT License
- *//*!
  * Copyright 2019-2020 mut-ex
  * Copyright 2020 Luke Zhang
  * MIT License
- */:root{scrollbar-width:none !important}
+ */:root{scrollbar-width:thin !important;scrollbar-color:#eff #0000 !important}

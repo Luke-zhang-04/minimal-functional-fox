@@ -9,5 +9,6 @@
 /* Hide scrollbar */
 
 :root {
-  scrollbar-width: none !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: variables.$mff-scrollbar-color #0000 !important;
 }
